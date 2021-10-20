@@ -1,0 +1,211 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{interval}
+\usepackage{jcematcom}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[pdftex]{hyperref}
+
+\usepackage{amsthm}
+\newtheorem{teo}{Teorema}
+\newtheorem{lema}{Lema}
+
+
+\hypersetup{colorlinks,%
+	    citecolor=black,%
+	    filecolor=black,%
+	    linkcolor=black,%
+	    urlcolor=blue}
+	    
+\title{Clase Práctica 1 }
+
+\author{\\
+\name Laura Tamayo \email \href{mailto:laura.tamayo@estudiantes.matcom.uh.cu}{laura.tamayo@estudiantes.matcom.uh.cu}
+	\\ \addr Grupo C411}
+	
+
+\ShortHeadings{Estadística}{Autores}
+\begin{document}
+
+
+\maketitle
+\selectlanguage{spanish} % Para producir el documento en Español
+
+\thispagestyle{empty}
+
+\section*{Ejercicio 1}
+
+\subsection*{Inciso a}
+Es una muestra pues se hizo una selección con respecto a todas las familias de la ciudad.
+\subsection*{Inciso b}
+En este caso se analizan los datos de todos los jugadores por lo que se trata de una población.
+\subsection*{Inciso c}
+Es una población pues se trata de todos los presos de la ciudad.
+\subsection*{Inciso d}
+Es una muestra pues se está analizando un subconjunto de los ancianos de la ciudad.
+
+\section*{Ejercicio 2}
+\subsection*{Inciso a}
+Cuantitativa discreta.
+\subsection*{Inciso b}
+Cualitativa.
+\subsection*{Inciso c}
+Cualitativa.
+\subsection*{Inciso d}
+Cuantitativa continua.
+\subsection*{Inciso e}
+Cuantitativa discreta.
+\subsection*{Inciso f}
+Cuantitativa continua.
+\subsection*{Inciso g}
+Cuantitativa continua.
+
+\section*{Ejercicio 3}
+Media: 3. Representa que un estudiante promedio tiene 3 en el examen de rendimiento físico.\\
+Moda: 3(trimodal). Representa que la mayoría de los estudiantes tienen 3 en el examen.
+Mediana: 3. Representa que el 50 $ \% $ de los estudiantes de la muestra tienen una eficiencia física de a lo sumo 3.
+\section*{Ejercicio 4}
+Mínimo: 2. Máximo: 43. Recorrido:41. Se utilizarán 8 intervalos de longitud 5.\\
+La tabla resultante es:\\
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	  \textbf{Intervalo}    & \textbf{Marca de clase} & $ \mathbf{n_i} $ & $ \mathbf{N_i} $ & $\mathbf{ f_i} $ & $ \mathbf{F_{i}} $ \\ \hline
+	$ \left[ 2,10\right) $  &            6            &        1         &        1         &      0.025       &       0.025        \\ \hline
+	$ \left[ 10,18\right) $ &           14            &        10        &        11        &       0.25       &       0.275        \\ \hline
+	$ \left[ 18,26\right) $ &           22            &        14        &        25        &       0.35       &       0.625        \\ \hline
+	$ \left[ 26,34\right) $ &           30            &        8         &        33        &       0.2        &       0.825        \\ \hline
+	$ \left[ 34,43\right] $ &          38.5           &        7         &        40        &      0.175       &         1          \\ \hline
+\end{tabular}
+
+\subsection*{Inciso a}
+Media arimética: $ \bar{X} = \frac{6*1+14*10+22*14+30*8+38.5*7}{40} = \frac{963.5}{40} = 24.08$.\\
+Moda:$ L_4 + \frac{n_5 -n_4}{(n_5 -n_4)+(n_5 - n_6)} * a_5 =  26 + \frac{38.5 -30}{(38.5-30) + (38.5 - 0)} * 9 = 27.627$.\\
+Mediana: $ L_2 + \frac{\frac{n}{2} + N_2}{N_3 - N_2}*a_3 = 10 + \frac{20-11}{25-11}*8 = 15.1428 $.\\
+Varianza:\begin{align*}
+	\sigma^{2} &=\frac{\sum_{i=1}^{n}n_{i}(MC_{i}-\bar{X})^{2}}{n-1}\\
+	&=\frac{1(6-24.08)^{2}+10(14-24.08)^{2}+14(22-24.08)^{2}+8(40-24.08)^{2}+7(38.5-24.08)^{2}}{39}\\
+	&=\frac{326.88+1016.06+60.56+280.37+1455.55}{39}\\
+	&=\frac{3139.92}{39}\\
+	&= 803.51
+\end{align*}
+Desviación típica: $ \sigma = \sqrt{\sigma^{2}} = \sqrt{80.51} = 8.972 $\\
+Coeficiente de variación: $ CV = \frac{\sigma}{\bar{X}} = \frac{8.972}{24.08} = 0.37 $
+Primer cuartil: 17.\\
+Segundo cuartil: 22(esto debería ser igual a la mediana así que en alguno de los dos cometí un error de cálculo).\\
+Tercer cuartil: 30.
+
+\subsection*{Inciso b}
+15 percentil: 14.
+
+\subsection*{Inciso c}
+\begin{figure}[htb]%
+	\begin{center}
+		\includegraphics[width = 8cm, height = 5 cm]{H4c.png}
+	\end{center}
+	\caption{Histograma de frecuencia(4c)}
+\end{figure}
+\begin{figure}[htb]%
+	\begin{center}
+		\includegraphics[width = 8cm, height = 5 cm]{B4c.png}
+	\end{center}
+	\caption{Gráfico de caja y bigotes(4c)}
+\end{figure}
+
+\subsection*{Inciso d}
+La media significa que la facultad promedio matriculó a 24 estudiantes.\\
+La moda significa que lo más común es matricular aproximadamente 28 estudiantes.\\
+La mediana implica que aproximadamente la mitad de las facultades matriculan a lo sumo 15 estudiantes aproximadamente.\\
+Del valor del coeficiente de variación de obtiene que los datos son muy heterogéneos.
+\section*{Ejercicio 5}
+\subsection*{Inciso a}
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	   \textbf{Intervalo}     & \textbf{Marca de clase} & $ \mathbf{n_i} $ & $ \mathbf{N_i} $ & $\mathbf{ f_i} $ & $ \mathbf{F_i} $ \\ \hline
+	 $ \left[ 0,30\right) $   &           15            &        20        &        20        &       0.2        &       0.2        \\ \hline
+	 $ \left[ 30,60\right) $  &           45            &        27        &        47        &       0.27       &       0.47       \\ \hline
+	 $ \left[ 60,90\right) $  &           75            &        38        &        85        &       0.38       &       0.85       \\ \hline
+	$ \left[ 90,120\right) $  &           105           &        13        &        98        &       0.13       &       0.98       \\ \hline
+	$ \left[ 120,160\right] $ &           140           &        2         &       100        &       0.02       &        1         \\ \hline
+\end{tabular}
+\subsection*{Inciso b}
+Media: $ \bar{X} = \frac{\sum_{i=1}^{n}(MC_{i}n_{i})}{n} = 60.1$. Una tienda promedio vende 60.1 mil pesos.\\
+Moda: $ M_{o} = L_{2} + \frac{n_{3}-n_{2}}{(n_{3}-n_{2})+(n_{3}-n_{4})}*a_{3} = 69.16$. Lo más común es tener ventas de 69.16 mil pesos.
+Mediana: $ M_{e} = L_{2} + \frac{\frac{n}{2} - N_{2}}{N_{3}-N_{2}}*a_{3} = 62.368 $. El 50$ \% $ de las tiendas tiene unas ventas de a lo sumo 62.368 mil pesos.\\
+Varianza: $ \sigma^{2} = \frac{\sum_{i=1}^{n}n_{i}(MC_{i}-\bar{X})^{2}}{n-1}= 951.01 $. Los datos están bastante desviados del promedio.\\
+Desviación estándar: $ \sigma = \sqrt{\sigma^{2}} = 30.8 $.\\
+Coeficiente de variación: $ CV = \frac{\sigma}{\bar{X}} = 0.51 $. Los datos son muy heterogéneos. 
+
+\subsection*{Inciso c}
+\begin{figure}[htb]%
+	\begin{center}
+		\includegraphics[width = 8cm, height = 5 cm]{H5c.png}
+	\end{center}
+	\caption{Histograma de frecuencia(5c)}
+\end{figure}
+
+\section*{Ejercicio 6}
+Como en este caso la variable es cualitativa por lo que es necesario codificar, el resultado sería:\\
+\begin{center}
+	\begin{tabular}{cc}
+		1 & color negro \\
+		2 & color azul \\
+		3 & color rojo \\
+		4 & color morado \\
+		5 & color gris \\
+		6 & color verde \\
+	\end{tabular}
+\end{center}
+\subsection*{Inciso a y c}
+Moda: 4. El color más común es el morado.\\
+Mediana: 3.5. La mitad de las personas pidieron el color rojo aproximadamente.\\
+Media: 3.4.\\
+Varianza: 2.110.\\
+Desviación estándar: 1.452.\\
+Coeficiente de variación: 0.427.
+\subsection*{Inciso b}
+\begin{figure}[htb]%
+	\begin{center}
+			\includegraphics[width = 8cm, height = 5 cm]{H6b.png}
+	\end{center}
+	\caption{Histograma de frecuencia(6b)}
+\end{figure}
+
+\section*{Ejercicio 7}
+\subsection*{Inciso a}
+Media: 21.7.\\
+Mediana: 21.\\
+Primer cuartil: 15.
+\subsection*{Inciso b}
+Variación: $ \sigma^{2} = 73.4 $.\\
+Desviación estándar: $ \sigma = 8.56 $.
+\section*{Ejercicio 8}
+\subsection*{Inciso a}
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	  \textbf{Intervalo}   & \textbf{Marca de clase} & $ \mathbf{n_i} $ & $ \mathbf{N_i} $ & $\mathbf{ f_i} $ & $ \mathbf{F_i} $ \\ \hline
+	$ \left[ 3,5\right) $  &            4            &        3         &        3         &       0.15       &       0.15       \\ \hline
+	$ \left[ 5,7\right) $  &            6            &        7         &        10        &       0.35       &       0.5        \\ \hline
+	$ \left[ 7,9\right) $  &            8            &        6         &        16        &       0.3        &       0.8        \\ \hline
+	$ \left[ 9,10\right] $ &           9.5           &        4         &        20        &       0.2        &        1         \\ \hline
+\end{tabular}
+\subsection*{Inciso b}
+Moda: 6.\\
+Media: 6.6.\\
+Mediana: 6.5.\\
+Tercer cuartil: 8.
+
+\subsection*{Inciso c}
+La frecuencia de dicho conjunto es 16.
+
+\subsection*{Inciso d}
+Varianza: 3.515.\\
+Desviación estándar: 1.875.
+
+\subsection*{Inciso e}
+El grupo de los actores es mejor pues necesitan en promedio 5 intentos aproximadamente mientras que un estudiante promedio necesita 7 aproximadamente.\\
+El coeficiente de variación del grupo de actores es 0.37 y el de los estudiantes es 0.28, por tanto el grupo de los estudiantes representa una muestra más homogénea.
+
+\end{document}
